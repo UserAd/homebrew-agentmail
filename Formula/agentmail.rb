@@ -7,17 +7,19 @@ class Agentmail < Formula
   on_macos do
     on_arm do
       url "https://github.com/UserAd/AgentMail/releases/download/v0.1.1/agentmail-darwin-arm64"
-      sha256 "PLACEHOLDER_DARWIN_ARM64"
+      sha256 "911c8123b8b1b905a2e3fb91fc3d72e6e0f54600f967b07451120de45fb96f01"
     end
     on_intel do
       url "https://github.com/UserAd/AgentMail/releases/download/v0.1.1/agentmail-darwin-amd64"
-      sha256 "PLACEHOLDER_DARWIN_AMD64"
+      sha256 "2b8c448308b3305600f111ac77fc7edfb3f8306770043013d3f4ac356266aaa4"
     end
   end
 
   on_linux do
-    url "https://github.com/UserAd/AgentMail/releases/download/v0.1.1/agentmail-linux-amd64"
-    sha256 "PLACEHOLDER_LINUX_AMD64"
+    on_intel do
+      url "https://github.com/UserAd/AgentMail/releases/download/v0.1.1/agentmail-linux-amd64"
+      sha256 "ec5399d6d60a243882711063778e6717ae8f9948f3e772951d27b66dca2707f4"
+    end
   end
 
   def install
