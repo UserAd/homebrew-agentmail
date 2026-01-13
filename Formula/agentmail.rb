@@ -1,24 +1,24 @@
 class Agentmail < Formula
   desc "Inter-agent communication for tmux sessions"
   homepage "https://github.com/UserAd/AgentMail"
-  version "0.2.1"
+  version "0.2.2"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/UserAd/AgentMail/releases/download/v0.2.1/agentmail-darwin-arm64"
-      sha256 "3470130ffccda3951416ef48c6548782e1819ab0d173565ad702bcd09a837fa1"
+      url "https://github.com/UserAd/AgentMail/releases/download/v0.2.2/agentmail-darwin-arm64"
+      sha256 "5f1ea3c0ca964a52d0719472addf60b5184286b6020e359462cf311f81f479fc"
     end
     on_intel do
-      url "https://github.com/UserAd/AgentMail/releases/download/v0.2.1/agentmail-darwin-amd64"
-      sha256 "e33701fa295171a80f52b6a751de83c5ac57e3b7ec7b9da82deccf8ed9ebcd32"
+      url "https://github.com/UserAd/AgentMail/releases/download/v0.2.2/agentmail-darwin-amd64"
+      sha256 "612fcdc2937d582d1d70a6d6ba2e40e66b309e8ce020e5a6f5415afe5ca1582d"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/UserAd/AgentMail/releases/download/v0.2.1/agentmail-linux-amd64"
-      sha256 "2cf5b5756ea2b34314e330be6f72209b06a05553d81be79e5a3111aa6c453efd"
+      url "https://github.com/UserAd/AgentMail/releases/download/v0.2.2/agentmail-linux-amd64"
+      sha256 "5ee2b5d058e53436a8af64bbe289cc1ab0081cb1a01ebbf81d7e434b8a79f703"
     end
   end
 
