@@ -1,24 +1,28 @@
 class Agentmail < Formula
   desc "Inter-agent communication for tmux sessions"
   homepage "https://github.com/UserAd/AgentMail"
-  version "0.3.3"
+  version "0.3.4"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/UserAd/AgentMail/releases/download/v0.3.3/agentmail-darwin-arm64"
-      sha256 "9a607cd57ad5181c06c7974c33167acfa67169f68a0b5c5eedd1fafd44aa4e20"
+      url "https://github.com/UserAd/AgentMail/releases/download/v0.3.4/agentmail-darwin-arm64"
+      sha256 "78926f2f47818cc4b654650cdc957bfbad4b46a98a04ff2293015f1ecd10f44d"
     end
     on_intel do
-      url "https://github.com/UserAd/AgentMail/releases/download/v0.3.3/agentmail-darwin-amd64"
-      sha256 "1a93bf85f11346de3f71f7f20fb6df45e2e54ff5de4b84c074e334d73c3c3761"
+      url "https://github.com/UserAd/AgentMail/releases/download/v0.3.4/agentmail-darwin-amd64"
+      sha256 "f64409f9a73a44a1a4b2bc9f218b53f346be70fef3c37f55d4e407b6fb49af97"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/UserAd/AgentMail/releases/download/v0.3.3/agentmail-linux-amd64"
-      sha256 "bf6e4dd786218faaee71f8d6c003d5bcc37a6fb873371ea244485054f70c02be"
+      url "https://github.com/UserAd/AgentMail/releases/download/v0.3.4/agentmail-linux-amd64"
+      sha256 "37dd25e094791434cef6f991055ad360216302c0a2485912c106b39624b3c97b"
+    end
+    on_arm do
+      url "https://github.com/UserAd/AgentMail/releases/download/v0.3.4/agentmail-linux-arm64"
+      sha256 "5b0add0e4c0b4bce9b9f38482546620d5840910960f1f26987786ce9ba3966d8"
     end
   end
 
@@ -27,7 +31,8 @@ class Agentmail < Formula
       bin.install "agentmail-darwin-arm64" => "agentmail" if Hardware::CPU.arm?
       bin.install "agentmail-darwin-amd64" => "agentmail" if Hardware::CPU.intel?
     else
-      bin.install "agentmail-linux-amd64" => "agentmail"
+      bin.install "agentmail-linux-arm64" => "agentmail" if Hardware::CPU.arm?
+      bin.install "agentmail-linux-amd64" => "agentmail" if Hardware::CPU.intel?
     end
   end
 
